@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1a1313;
+}
+
+.container {
+    background: linear-gradient(160deg, #4A90E2, #50E3C2);
+    color: #fff;
+    width: 800px;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container .input-field {
+    z-index: -999;
+    opacity: 0;
+    position: absolute;
+}
+
+.content-box {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-box .text-of-typing {
+    max-height: 255px;
+    max-width: 600px;
+    overflow-y: auto;
+}
+
+.content-box .text-of-typing::-webkit-scrollbar {
+    width: 0;
+}
+
+.content-box .text-of-typing p {
+    text-align: justify;
+    font-size: 25px;
+    letter-spacing: 1px;
+    word-break: break-all;
+    color: white;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.content-box .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 17%;
+    text-align: center;
+    line-height: 32px;
+}
+
+.content .result {
+    padding: 19px;
+    border-radius: 10px;
+    background: #ffffff;
+    display: block;
+    text-shadow: none;
+    color: #000;
+}
+
+.content .result li {
+    border-bottom: 1px solid #ccc;
+    list-style: none;
+}
+
+.content .result li:last-child {
+    border-bottom: none;
+}
+
+.result li.time,
+.result li.errors,
+.result li.wpm,
+.result li.cpm {
+    font-size: 17px;
+}
+
+.result li.time p,
+.result li.errors p,
+.result li.wpm p,
+.result li.cpm p {
+    font-weight: 600;
+}
+
+.container button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #4A90E2;
+    margin-top: 20px;
+}
+
+.container button:hover {
+    background: #50E3C2;
+}
+
+.text-of-typing p span.correct {
+    color: rgb(15, 235, 15);
+}
+
+.text-of-typing p span.incorrect {
+    color: rgb(236, 25, 25);
+}
+
+.text-of-typing p span.active {
+    color: #979494;
+}
+
+.text-of-typing p span.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #9af902;
+    animation: blink 1s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+
+.text-of-typing p span {
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.race-track {
+    position: relative;
+    height: 100px;
+    background-color: lightgrey;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.school, .home {
+    font-size: 48px;
+}
+
+.track-path {
+    position: relative;
+    flex-grow: 1;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bus {
+    position: absolute;
+    font-size: 48px;
+    left: 0;
+    transition: left 1s linear; /* Smooth movement */
+}
+
+.message, .bus-reached-home-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: red;
+}
