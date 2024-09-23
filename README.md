@@ -45,4 +45,7 @@ This project is a **Typing Test** built using **HTML**, **CSS**, and **JavaScrip
 - **Paragraph Changes**: 
     - Each test starts with a random paragraph, and users can switch to a new one after completing or resetting the test.
 
-## Project Structure
+## ScreenShot
+
+![Screenshot 2024-09-23 114428](https://github.com/user-attachments/assets/90f4f14d-78e6-46cd-a6d4-a5643e275085)
+
